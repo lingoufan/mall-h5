@@ -77,6 +77,39 @@ var routes = [// 首页我们需要默认空路径重定向到 home ，避免空
   meta: {
     index: 2
   }
+}, {
+  path: '/login',
+  name: 'login',
+  component: function component() {
+    return Promise.resolve().then(function () {
+      return _interopRequireWildcard(require('../views/Login.vue'));
+    });
+  },
+  meta: {
+    index: 2
+  }
+}, {
+  path: '/address',
+  name: 'address',
+  component: function component() {
+    return Promise.resolve().then(function () {
+      return _interopRequireWildcard(require('../views/Address.vue'));
+    });
+  },
+  meta: {
+    index: 2
+  }
+}, {
+  path: '/address-edit',
+  name: 'address-edit',
+  component: function component() {
+    return Promise.resolve().then(function () {
+      return _interopRequireWildcard(require('../views/AddressEdit.vue'));
+    });
+  },
+  meta: {
+    index: 2
+  }
 }];
 var router = new _vueRouter["default"]({
   routes: routes
