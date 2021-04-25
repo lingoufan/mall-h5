@@ -19,6 +19,13 @@
       </router-link>
     </header>
     <swiper :list="swiperList"></swiper>
+    <!-- 分栏 -->
+     <div class="category-list">
+        <div v-for="item in categoryList" v-bind:key="item.categoryId">        
+            <img :src="require('../assets/' + item.imgUrl)" />        
+            <span>{{ item.name }}</span>     
+        </div>   
+     </div>
   </div>
 </template>
 
@@ -33,6 +40,7 @@ export default {
     return {
       isLogin: false,
       swiperList:[],
+      categoryList: [        {          name: "楼楼交友",          imgUrl: "jiaoyou.png",          categoryId: 100001,        },        {          name: "楼楼家政",          imgUrl: "jiazheng.png",          categoryId: 100003,        },        {          name: "楼楼水产",          imgUrl: "shuichan1.png",          categoryId: 100002,        },        {          name: "楼楼租车",          imgUrl: "zuche.png",          categoryId: 100004,        },        {          name: "楼楼招聘",          imgUrl: "pin.png",          categoryId: 100005,        },        {          name: "楼楼二手",          imgUrl: "ershou.png",          categoryId: 100006,        },        {          name: "楼楼宠物",          imgUrl: "chongwu.png",          categoryId: 100007,        },        {          name: "楼楼外卖",          imgUrl: "wm.png",          categoryId: 100008,        },        {          name: "楼楼电器",          imgUrl: "dianqi.png",          categoryId: 100009,        },        {          name: "楼楼充值",          imgUrl: "czcz.png",          categoryId: 1000010,        },      ],
     };
   },
   components:{
@@ -116,4 +124,9 @@ export default {
     }
   }
 }
+//分类栏目样式  
+.category-list {    
+    display: flex;    
+    flex-shrink: 0;    
+    flex-wrap: wrap;    width: 100%;    padding-bottom: 13px;    div {      display: flex;      flex-direction: column;      width: 20%;      text-align: center;      img {        .wh(40px, 40px);        margin: 13px auto 8px auto;      }    }  }
 </style>
