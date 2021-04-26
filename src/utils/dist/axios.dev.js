@@ -13,8 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-_axios["default"].defaults.baseURL = process.env.NODE_ENV == 'development' ? '//121.43.231.185:8080/api/v1' : '//121.43.231.185:8080/api/v1'; // axios.defaults.baseURL = process.env.NODE_ENV == 'development' ? '//10.30.224.247:8080/api/v1' : '//10.30.224.247:8080/api/v1'
-
+_axios["default"].defaults.baseURL = process.env.NODE_ENV == 'development' ? '//localhost:8080/api/v1' : '//localhost:8080/api/v1';
 _axios["default"].defaults.withCredentials = true;
 _axios["default"].defaults.headers['X-Requested-With'] = 'XMLHttpRequest';
 _axios["default"].defaults.headers['token'] = localStorage.getItem('token') || '';

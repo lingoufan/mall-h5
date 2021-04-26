@@ -79,6 +79,8 @@ export default {
   position: absolute;  
   backface-visibility: hidden;
 }
+
+
 .slide-right-enter {  
   opacity: 0;  
   transform: translate3d(-100%, 0, 0);
